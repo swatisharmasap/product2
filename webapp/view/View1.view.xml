@@ -1,0 +1,63 @@
+<mvc:View controllerName="sap.com.product2.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <Table  items="{oProductJSONModel>/ProductDetails}">
+		
+		<columns>
+			<Column>
+				<Text text="Product ID" />
+			</Column>
+			<Column>
+				<Text text="Product Name" />
+			</Column>
+			<Column>
+				<Text text="SupplierID" />
+			</Column>
+
+			<Column>
+				<Text text="CategoryID" />
+			</Column>
+
+            <Column>
+				<Text text="QuantityPerUnit" />
+			</Column>
+
+             <Column>
+				<Text text="UnitPrice" />
+			</Column>
+             <Column>
+				<Text text="UnitsInStock" />
+			</Column>
+             <Column>
+				<Text text="UnitsOnOrder" />
+			</Column>
+             <Column>
+				<Text text="ReorderLevel" />
+			</Column>
+            <Column>
+				<Text text="Discontinued" />
+			</Column>
+
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle" type="Navigation" press="onRowPress">
+				<cells>
+					<Text text="{oProductJSONModel>ProductID}"  />
+					<Text text="{oProductJSONModel>ProductName}" />
+					<Text text="{oProductJSONModel>SupplierID}" />
+					<Text text="{oProductJSONModel>CategoryID}" />
+                    <Text text="{oProductJSONModel>QuantityPerUnit}" />
+                    <Text text="{oProductJSONModel>UnitPrice}" />
+                    <Text text="{oProductJSONModel>UnitsInStock}" />
+                    <Text text="{oProductJSONModel>UnitsOnOrder}" />
+                    <Text text="{oProductJSONModel>ReorderLevel}" />
+                    <Text text="{oProductJSONModel>Discontinued}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+</Table>
+        </content>
+    </Page>
+</mvc:View>
